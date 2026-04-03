@@ -7,11 +7,11 @@ A professional-grade desktop application of the classic Tic-Tac-Toe game, built 
 
 ### 🎮 Initial Game State
 The game initializes with a clean interface, automatically tracking the first player's turn (X) and the game's "In Progress" status.
-<img width="800" alt="Initial State" src="TicTacToe-Game-Program-images/image_0.png" />
+<img width="800" alt="Initial State" src="assets/Image1.png" />
 
 ### 🏆 Win Conditions & User Feedback
-Upon a win (shown vertical for Player 1), the winning path is highlighted, a confirmation MessageBox appears, and the game state updates to "Winner: Player 1".
-<img width="800" alt="Order Success" src="TicTacToe-Game-Program-images/image_1.png" />
+Upon a win, the winning path is highlighted, a confirmation MessageBox appears, and the game state updates to show the winner.
+<img width="800" alt="Winner Declaration" src="assets/Image2.png" />
 
 ## 🛠️ Technology Stack
 - **Language:** C#
@@ -20,7 +20,7 @@ Upon a win (shown vertical for Player 1), the winning path is highlighted, a con
 
 ## 🚀 Key Features
 - **Two-Player Local Multiplayer:** Seamless turn-switching logic between Player 1 (X) and Player 2 (O).
-- **Advanced Win/Draw Detection:** Algorithms horizontally, vertically, diagonally, and draw scenarios.
+- **Advanced Win/Draw Detection:** Algorithms to detect horizontal, vertical, diagonal wins, and draw scenarios.
 - **Dynamic Grid Painting:** Grid lines are dynamically rendered in the `Form1_Paint` event using custom `Pen` objects, showcasing programmatic UI control.
 - **Real-Time State Management:** Instantly updates labels for current turn, win conditions, and draw status.
 - **UI State Control:** Disables grid buttons upon game completion to prevent invalid inputs.
@@ -38,7 +38,7 @@ A major engineering focus is the dynamic drawing of grid lines using GDI+ within
 The winner detection logic is abstracted into a generalized `GameValue` method. This modular design makes the logic clear, extensible (e.g., adding AI), and easy to debug.
 
 ### 4. Efficient Resource & Event Handling
-Uses `enum enPlayer` for turn handling, `Image.FromFile` for dynamic asset loading, and well-organized click event handlers. (Planned refactoring for shared handlers).
+Uses `enum enPlayer` for turn handling, `Image.FromFile` for dynamic asset loading, and well-organized click event handlers.
 
 ## 💡 The Technical Challenges & Solutions
 - **Challenge:** Creating a clean way to detect winners without writing redundant code for every possible line combination.
